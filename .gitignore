@@ -25,3 +25,6 @@ dist-ssr
 
 # deploying utils
 .netlify
+
+TODO
+*-backup.*
