@@ -50,6 +50,7 @@ export default defineConfig(({ command }) => {
       preprocessorOptions: {
         scss: {
           additionalData: globalStylesOptions,
+          includePaths: ['node_modules'],
         },
       },
     },
