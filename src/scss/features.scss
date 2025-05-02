@@ -1,0 +1,37 @@
+#features {
+  padding: 40px 0;
+  background-image: url(/img/features-bg-mobile@1x.png);
+  color: #ffffff;
+}
+
+.features-title {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.features-list-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.features-list-item img {
+  width: 31px;
+  height: 31px;
+}
+
+.features-list-item p {
+  font-size: 16px;
+  line-height: 21px;
+  color: #efffd3;
+}
+
+.features-list-item p span {
+  font-weight: 700;
+}

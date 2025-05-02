@@ -1,0 +1,54 @@
+#how-to-play {
+  background-image: url(/img/how-to-bg-mobile@1x.jpg);
+  padding: 40px 0;
+}
+
+.how-to-play-title {
+  margin-bottom: 20px;
+}
+
+.how-to-play-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0px 16px;
+}
+
+.how-to-play-list-item:nth-child(even) {
+  margin-top: 60px;
+}
+
+.how-to-play-list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  border: 1.15px solid #ffffff4a;
+  border-radius: 20px;
+  box-shadow: 4px 4px 20px #0061af;
+  padding: 8px;
+}
+
+.how-to-play-list-item.smal {
+  width: 136px;
+  height: 169px;
+}
+
+.how-to-play-list-item.big {
+  margin-top: 20px;
+  width: 288px;
+  height: 169px;
+}
+
+.how-to-play-list-item img {
+  width: 98px;
+  height: 98px;
+}
+
+.how-to-play-list-item p {
+  font-family: 'DynaPuff';
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #000000;
+}
