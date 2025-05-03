@@ -1,0 +1,14 @@
+.footer {
+  background: url('../img/footer-desktop@1x.png'),
+    linear-gradient(to bottom, #004379, #004379);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply; /* Накладывает фото на фон */
+}
+
+.footer-text {
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
+}
