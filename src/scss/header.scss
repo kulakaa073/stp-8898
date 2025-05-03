@@ -1,0 +1,26 @@
+.header {
+  position: absolute;
+  padding-top: 32px;
+}
+
+.navbar {
+  display: none;
+}
+
+#burger-menu-button {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  border: 0.5px solid #ffffff4a;
+  border-radius: 4px;
+  background-color: #ffffff29;
+  width: 24px;
+  height: 24px;
+  padding: 1px;
+}
+
+.burger-menu-icon {
+  fill: #000056;
+  width: 22px;
+  height: 18px;
+}

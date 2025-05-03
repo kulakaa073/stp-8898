@@ -1,6 +1,22 @@
 #how-to-play {
-  background-image: url(/img/how-to-bg-mobile@1x.jpg);
+  /*bot offset: 62px; top:24px*/
   padding: 40px 0;
+
+  position: relative;
+  z-index: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -24px; /* offset above the section */
+    bottom: -62px; /* offset below the section */
+    left: 0;
+    right: 0;
+    background-image: url(/img/how-to-bg-mobile@1x.png);
+    background-position: inherit;
+    background-size: inherit;
+    z-index: -1; /* put it behind the content */
+  }
 }
 
 .how-to-play-title {
@@ -32,6 +48,46 @@
 .how-to-play-list-item.smal {
   width: 136px;
   height: 169px;
+  position: relative;
+}
+
+.how-to-play-list-item.smal::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 38px;
+  background-image: url(/img/how-to-arrow@1x.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.how-to-play-list-item.smal:first-child::after {
+  top: 24px;
+  left: 118px;
+  transform: rotate(37.5deg);
+  z-index: 2;
+}
+
+.how-to-play-list-item.smal:nth-child(2)::after {
+  top: 163px;
+  left: -43.3px;
+  transform: rotate(-37.5deg) scaleX(-1);
+  z-index: 2;
+}
+
+.how-to-play-list-item.smal:nth-child(3)::after {
+  top: 165.4px;
+  left: 110px;
+  transform: rotate(37.5deg);
+  z-index: 2;
+}
+
+.how-to-play-list-item.smal:nth-child(4)::after {
+  top: 166px;
+  left: 74px;
+  transform: rotate(104.2deg);
+  z-index: 2;
 }
 
 .how-to-play-list-item.big {

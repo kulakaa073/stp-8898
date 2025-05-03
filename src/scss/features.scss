@@ -2,6 +2,8 @@
   padding: 40px 0;
   background-image: url(/img/features-bg-mobile@1x.png);
   color: #ffffff;
+  position: relative;
+  z-index: 1;
 }
 
 .features-title {
@@ -29,9 +31,9 @@
 .features-list-item p {
   font-size: 16px;
   line-height: 21px;
-  color: #efffd3;
 }
 
 .features-list-item p span {
   font-weight: 700;
+  color: #efffd3;
 }
