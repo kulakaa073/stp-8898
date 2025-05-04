@@ -1,0 +1,124 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 998;
+  padding-top: 32px;
+  transition: padding 250ms ease-out;
+
+  &[data-scrolled='true'] {
+    padding: 16px 0;
+    background-color: #ffffff29;
+    box-shadow: 0px 4px 6px #0000001a;
+  }
+}
+
+.navbar {
+  display: none;
+}
+
+#burger-menu-button {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  border: 0.5px solid #ffffff4a;
+  border-radius: 4px;
+  background-color: #ffffff29;
+  width: 24px;
+  height: 24px;
+  padding: 1px;
+  transition: all 150ms ease-in-out;
+}
+
+#burger-menu-button:hover,
+#burger-menu-button:focus,
+#burger-menu-button:active {
+  background-color: #ffffff6a;
+  border: 0.5px solid #ffffff49;
+  outline: none;
+}
+
+.burger-menu-icon {
+  fill: #000056;
+  width: 22px;
+  height: 18px;
+}
+
+@include media(desktop) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00005629;
+    border: 1.15px solid #ffffff4a;
+    backdrop-filter: blur(14px);
+    border-radius: 50px;
+    height: 100px;
+    overflow: hidden;
+  }
+
+  #burger-menu-button {
+    display: none;
+  }
+
+  .header-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DynaPuff';
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0px 4px 4px #000056;
+    padding: 0 40px;
+    height: 100%;
+    transition: all 150ms ease-in-out;
+  }
+
+  .header-logo:hover,
+  .header-logo:focus {
+    background-color: #ffffff39;
+    box-shadow: 0 0 10px #ffffff;
+    text-shadow: 0px 4px 4px #000056, 0px -4px 10px #ffffff;
+    outline: none;
+  }
+
+  .header-logo span {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .nav-list {
+    display: flex;
+    height: 100%;
+    font-family: 'Crimson Text';
+    font-size: 20px;
+    line-height: 26px;
+    color: #ffffff;
+  }
+
+  .nav-list li {
+    padding: 0;
+  }
+  .nav-list a {
+    display: block;
+    height: 100%;
+    padding: 36px 16px;
+    transition: all 150ms ease-in-out;
+  }
+
+  .nav-list li:last-child a {
+    padding-right: 50px;
+  }
+
+  .nav-list a:hover,
+  .nav-list a:focus {
+    outline: none;
+    background-color: #ffffff39;
+    box-shadow: 0 0 10px #ffffff;
+    text-shadow: 0px 2px 15px #ffffff, 0px -2px 15px #ffffff;
+  }
+}

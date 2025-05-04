@@ -1,0 +1,27 @@
+#video {
+  padding: 40px 0;
+  background-image: url(/img/video-bg-mobile@1x.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  z-index: 1;
+}
+
+@include high-resolution {
+  #video {
+    background-image: url(/img/video-bg-mobile@2x.png);
+  }
+}
+
+@include media(desktop) {
+  #video {
+    padding: 100px 0;
+    background-image: url(/img/video-bg-desktop@1x.png);
+  }
+
+  @include high-resolution {
+    #video {
+      background-image: url(/img/video-bg-desktop@2x.png);
+    }
+  }
+}

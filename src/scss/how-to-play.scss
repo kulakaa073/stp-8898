@@ -1,0 +1,228 @@
+#how-to-play {
+  // bot offset: 62px; top:24px
+  padding: 40px 0;
+
+  position: relative;
+  z-index: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -24px; // offset above the section
+    bottom: -62px; // offset below the section
+    left: 0;
+    right: 0;
+    background-image: url(/img/how-to-bg-mobile@1x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1; // put it behind the content
+  }
+}
+
+@include high-resolution {
+  #how-to-play::before {
+    background-image: url(/img/how-to-bg-mobile@2x.png);
+  }
+}
+
+.how-to-play-title {
+  margin-bottom: 20px;
+}
+
+.how-to-play-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0px 16px;
+}
+
+.how-to-play-list-item:nth-child(even) {
+  margin-top: 60px;
+}
+
+.how-to-play-list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  border: 1.15px solid #ffffff4a;
+  border-radius: 20px;
+  box-shadow: 4px 4px 20px #0061af;
+  padding: 8px;
+}
+
+.how-to-play-list-item.smal {
+  width: 136px;
+  height: 169px;
+  position: relative;
+}
+
+.how-to-play-list-item.smal::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 38px;
+  background-image: url(/img/how-to-arrow@1x.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+@include high-resolution {
+  .how-to-play-list-item.smal::after {
+    background-image: url(/img/how-to-arrow@2x.png);
+  }
+}
+
+.how-to-play-list-item.smal:first-child::after {
+  top: 24px;
+  left: 118px;
+  transform: rotate(37.5deg);
+  z-index: 2;
+}
+
+.how-to-play-list-item.smal:nth-child(2)::after {
+  top: 163px;
+  left: -43.3px;
+  transform: rotate(-37.5deg) scaleX(-1);
+  z-index: 2;
+}
+
+.how-to-play-list-item.smal:nth-child(3)::after {
+  top: 165.4px;
+  left: 110px;
+  transform: rotate(37.5deg);
+  z-index: 2;
+}
+
+.how-to-play-list-item.smal:nth-child(4)::after {
+  top: 166px;
+  left: 74px;
+  transform: rotate(104.2deg);
+  z-index: 2;
+}
+
+.how-to-play-list-item.big {
+  margin-top: 20px;
+  width: 288px;
+  height: 169px;
+}
+
+.how-to-play-list-item img {
+  width: 98px;
+  height: 98px;
+}
+
+.how-to-play-list-item p {
+  font-family: 'DynaPuff';
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #000000;
+}
+
+@include media(desktop) {
+  #how-to-play {
+    // bot 34px offset: ; top:76px
+    padding: 100px 0;
+
+    &::before {
+      content: '';
+      top: -76px; // offset above the section
+      bottom: -34px; // offset below the section
+      background-image: url(/img/how-to-bg-desktop@1x.png);
+      z-index: -2; // put it behind the content
+    }
+  }
+
+  @include high-resolution {
+    #how-to-play::before {
+      background-image: url(/img/how-to-bg-desktop@2x.png);
+    }
+  }
+
+  .how-to-play-title {
+    margin-bottom: 36px;
+  }
+
+  .how-to-play-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); // 2 equal columns
+    grid-template-rows: auto auto auto; // 3 rows
+  }
+
+  .how-to-play-list-item.smal {
+    width: 347px;
+    height: 339px;
+    position: relative;
+  }
+
+  .how-to-play-list-item:nth-child(1) {
+    margin-left: 92px;
+  }
+
+  .how-to-play-list-item:nth-child(2) {
+    margin-left: 100px;
+    margin-top: 228px;
+  }
+
+  .how-to-play-list-item:nth-child(3) {
+    margin-top: 22px;
+    margin-left: 152px;
+  }
+
+  .how-to-play-list-item:nth-child(4) {
+    margin-top: 251px;
+    margin-left: 166px;
+  }
+
+  .how-to-play-list-item.big {
+    margin: 176px auto 0;
+    grid-column: span 2;
+    width: 542px;
+    height: 339px;
+  }
+
+  .how-to-play-list-item img {
+    width: 233px;
+    height: 233px;
+  }
+
+  .how-to-play-list-item p {
+    font-size: 26px;
+    line-height: 31px;
+  }
+
+  .how-to-play-list-item.smal::after {
+    width: 163px;
+    height: 104px;
+  }
+
+  .how-to-play-list-item.smal:first-child::after {
+    top: 116px;
+    left: 380px;
+    transform: rotate(0deg);
+    z-index: 2;
+  }
+
+  .how-to-play-list-item.smal:nth-child(2)::after {
+    top: 228px;
+    left: -188px;
+    transform: rotate(-23deg) scaleX(-1);
+    z-index: 2;
+  }
+
+  .how-to-play-list-item.smal:nth-child(3)::after {
+    top: 260px;
+    left: 377px;
+    transform: rotate(0);
+    z-index: 2;
+  }
+
+  .how-to-play-list-item.smal:nth-child(4)::after {
+    top: 365.2px;
+    left: -126.8px;
+    transform: rotate(-33deg) scaleX(-1);
+    z-index: 2;
+  }
+}
