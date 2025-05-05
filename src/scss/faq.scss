@@ -1,0 +1,120 @@
+/* Загальні стилі для мобільної версії */
+.faq-section {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+/* Контейнер */
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Заголовок */
+.faq-title {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.4);
+  text-align: center;
+}
+
+/* Контейнер акордеону */
+.faq-acc-container {
+  border-top: 1px solid rgba(250, 250, 250, 0.2);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Елемент */
+.faq-acc-item {
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+}
+
+/* Заголовок питання */
+.faq-acc-item .faq-acc-header {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: var(--main-text);
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Кнопка акордеону */
+.faq-acc-button {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 50px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  transition: border-color 400ms ease;
+}
+
+.faq-acc-item .faq-acc-button:hover {
+  border-color: rgba(250, 250, 250, 0.6);
+}
+
+/* Іконки (збільшені для мобільної версії) */
+.faq-acc-icon {
+  width: 24px;
+  height: 24px;
+  fill: #fafafa;
+  stroke: var(--main-text);
+  transition: transform 0.3s ease-out;
+}
+
+/* Панель з відповіддю */
+.faq-acc-panel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Текст відповіді */
+.faq-acc-text {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 140%;
+  padding-top: 18px;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
+}
+
+/* Анімація для бібліотеки accordion-js */
+.ac .ac-panel {
+  overflow: hidden;
+  transition: height 0.3s ease-out, visibility 0.3s ease-out;
+}
+
+.ac.js-enabled .ac-panel {
+  visibility: hidden;
+}
+
+.ac.is-active .ac-panel {
+  visibility: visible;
+}
+
+/* Анімація обертання кнопки */
+.ac.is-active .faq-acc-icon {
+  transform: rotate(90deg);
+}
+
+/* Виправлення розмірів картинок */
+.faq-acc-text img {
+  width: 24px;
+  height: 24px;
+}

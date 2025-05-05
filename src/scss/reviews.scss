@@ -1,0 +1,201 @@
+/* Основний блок відгуків із синім фоном */
+#reviews {
+  position: relative;
+  padding: 60px 0;
+  overflow: hidden;
+  background-color: #1372c4; /* синій фон */
+}
+
+/* Прибираємо декоративні псевдоелементи – вони не відповідають макету */
+/*
+#reviews::before,
+#reviews::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  background-color: #f4d05c;
+  border-radius: 50% 50% 0 0;
+  left: 0;
+  right: 0;
+}
+
+#reviews::before {
+  top: 0;
+  transform: translateY(-50%);
+}
+
+#reviews::after {
+  bottom: 0;
+  transform: translateY(50%);
+  border-radius: 0 0 50% 50%;
+}
+*/
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Заголовок секції – центруємо та робимо текст білим */
+.reviews-title {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Список відгуків – використовуємо flex із додатковим розривом */
+.reviews-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+}
+
+/* Оформлення окремого відгуку */
+.reviews-item {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 20px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1; /* для рівномірного розподілу простору */
+}
+
+/* Зірочки рейтингу */
+.reviews-stars {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.star-icon {
+  width: 16px;
+  height: 16px;
+  fill: #f4d05c;
+  margin-right: 2px;
+}
+
+/* Ім'я користувача */
+.reviews-username {
+  color: #f4d05c;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Текст відгуку */
+.reviews-text {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Placeholder, якщо немає відгуків */
+.reviews-placeholder {
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  padding: 40px;
+  width: 100%;
+}
+
+/* Контейнер слайдера – відносне позиціювання для розташування кнопок */
+.reviews-swiper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Стилі кнопок навігації (ліворуч і праворуч) */
+.swiper-btn-prev,
+.swiper-btn-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+/* Ліва кнопка */
+.swiper-btn-prev {
+  left: 10px;
+}
+
+/* Права кнопка */
+.swiper-btn-next {
+  right: 10px;
+}
+
+.swiper-btn-prev:hover,
+.swiper-btn-next:hover {
+  background-color: #f4d05c;
+}
+
+.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.swiper-button-active {
+  opacity: 1;
+}
+
+/* Іконки стрілок всередині кнопок */
+.arrow-icon {
+  width: 20px;
+  height: 20px;
+  fill: #1372c4;
+}
+
+.swiper-btn-prev svg {
+  transform: rotate(180deg);
+}
+
+/* Адаптивні налаштування */
+@media (min-width: 768px) {
+  .reviews-title {
+    font-size: 32px;
+  }
+
+  .reviews-item {
+    padding: 24px;
+  }
+
+  .star-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .reviews-username {
+    font-size: 16px;
+  }
+
+  .reviews-text {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .reviews-title {
+    font-size: 36px;
+  }
+}
