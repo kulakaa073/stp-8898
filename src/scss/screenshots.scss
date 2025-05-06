@@ -1,16 +1,18 @@
-.preview-label {
-  text-align: center;
+#screenshots {
+  padding: 40px 16px;
+}
+
+.screen-head {
   font-family: 'DynaPuff', sans-serif;
-  font-size: 24px;
   font-weight: 500;
+  font-size: 24px;
   color: #2a2a2a;
-  margin: 20px 0;
+  margin-bottom: 20px;
 }
 .screenshot-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 50px;
 }
 .photo-container {
   display: flex;
@@ -63,6 +65,14 @@
 
 /* Адаптация для ПК */
 @media (min-width: 1200px) {
+  #screenshots {
+    padding: 100px 60px;
+  }
+
+  .screen-head {
+    font-size: 36px;
+  }
+
   .photo-container {
     flex-wrap: nowrap;
   }
