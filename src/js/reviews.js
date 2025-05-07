@@ -8,10 +8,11 @@ const swiperBtnNextEl = document.querySelector('[data-swiper="btn-next"]');
 
 const reviewsSwiper = new Swiper(swiperEl, {
   modules: [Navigation, Keyboard],
-  slidesPerView: 1,
+  slidesPerView: 'auto',
   spaceBetween: 5,
   direction: 'horizontal',
   autoResize: false,
+  visibilityFullFit: true,
   navigation: {
     nextEl: swiperBtnNextEl,
     prevEl: swiperBtnPrevEl,
@@ -22,7 +23,6 @@ const reviewsSwiper = new Swiper(swiperEl, {
   },
   breakpoints: {
     1200: {
-      slidesPerView: 2,
       spaceBetween: 20,
     },
   },
