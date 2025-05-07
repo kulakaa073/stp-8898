@@ -1,7 +1,7 @@
 import Accordion from 'accordion-js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const according = document.querySelector('.faq-acc-container');
+  const according = document.querySelector('[data-accordion="true"]');
   if (according) {
     new Accordion(according, {
       collapse: true,

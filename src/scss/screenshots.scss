@@ -1,6 +1,6 @@
 /* Контейнер для скріншотів */
 #screenshots {
-  padding: 40px 16px; /* Стандартний відступ */
+  padding: 40px 0; /* Стандартний відступ */
 }
 
 /* Заголовок */
@@ -24,7 +24,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
   position: relative;
 }
 

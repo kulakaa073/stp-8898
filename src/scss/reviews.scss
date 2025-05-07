@@ -1,6 +1,6 @@
 #reviews {
   position: relative;
-  padding: 40px 16px;
+  padding: 40px 0;
   color: #ffffff;
   z-index: 1;
   background-size: 100% 100%;
@@ -14,12 +14,8 @@
 }
 
 .reviews-title {
-  font-family: 'DynaPuff', sans-serif;
-  font-weight: 500;
-  font-size: 24px;
   color: #fff;
   margin-bottom: 20px;
-  text-align: left;
 }
 
 .reviews-list {
@@ -29,8 +25,7 @@
 /* Container for the swiper */
 .reviews-swiper {
   position: relative;
-  overflow: visible; /* Allow buttons to be visible outside swiper */
-  padding: 0 40px; /* Add padding for navigation buttons */
+  width: 233px;
 }
 
 .reviews-item {
@@ -69,6 +64,7 @@
   font-family: 'DynaPuff', sans-serif;
   font-weight: 400;
   font-size: 14px;
+  line-height: 17px;
   text-align: center;
   color: #fff;
   margin-bottom: 20px;
@@ -82,6 +78,7 @@
   text-align: center;
   color: #fff;
   margin: 0;
+  line-height: 21px;
 }
 
 /* Navigation buttons */
@@ -101,14 +98,9 @@
   justify-content: center;
 }
 
-/* Позиціювання кнопки "prev" */
-.swiper-btn-prev {
-  transform: translateX(-100%) translateY(-50%);
-}
-
 /* Позиціювання кнопки "next" */
 .swiper-btn-next {
-  transform: translateX(1440%) translateY(-50%);
+  transform: translateX(1340%) translateY(-50%);
 }
 
 .swiper-btn-prev svg,
@@ -134,7 +126,7 @@
 
 @media (min-width: 1200px) {
   #reviews {
-    padding: 80px 100px;
+    padding: 100px 0;
     background-image: url(/img/reviews-bg-desktop@1x.png);
   }
 
@@ -151,10 +143,11 @@
 
   .reviews-swiper {
     padding: 0 60px;
+    width: 960px;
   }
 
   .reviews-item {
-    padding: 32px;
+    padding: 20px 40px 34px;
     border-radius: 49px;
     width: 470px;
     height: 214px;
@@ -162,10 +155,17 @@
 
   .reviews-username {
     font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 24px;
   }
 
   .reviews-text {
     font-size: 26px;
+    line-height: 34px;
+  }
+
+  .reviews-stars {
+    margin-bottom: 12px;
   }
 
   .star-icon {
@@ -175,15 +175,11 @@
 
   .swiper-btn-prev svg,
   .swiper-btn-next svg {
-    width: 30px;
-    height: 30px;
-  }
-
-  .swiper-btn-prev {
-    transform: translateX(-150%) translateY(-50%);
+    width: 40px;
+    height: 40px;
   }
 
   .swiper-btn-next {
-    transform: translateX(2980%) translateY(-50%);
+    transform: translateX(2600%) translateY(-50%);
   }
 }

@@ -1,16 +1,11 @@
 #download-now {
-  padding: 40px 16px;
+  padding: 40px 0;
   background-image: url(/img/download-now-bg-mobile@1x.png);
   color: #ffffff;
   position: relative;
   z-index: 1;
   background-size: 100% 100%;
   margin-bottom: 40px;
-}
-
-.container {
-  margin: 0 auto;
-  text-align: center;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
