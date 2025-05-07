@@ -1,0 +1,189 @@
+#reviews {
+  position: relative;
+  padding: 40px 16px;
+  color: #ffffff;
+  z-index: 1;
+  background-size: 100% 100%;
+  background-image: url(/img/reviews-bg-mobile@1x.png);
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  #reviews {
+    background-image: url(/img/reviews-bg-mobile@2x.png);
+  }
+}
+
+.reviews-title {
+  font-family: 'DynaPuff', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.reviews-list {
+  display: flex;
+}
+
+/* Container for the swiper */
+.reviews-swiper {
+  position: relative;
+  overflow: visible; /* Allow buttons to be visible outside swiper */
+  padding: 0 40px; /* Add padding for navigation buttons */
+}
+
+.reviews-item {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 16px 8px;
+  height: 143px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  width: 233px;
+}
+
+/* Зірочки рейтингу */
+.reviews-stars {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.star-icon {
+  width: 24px;
+  height: 24px;
+  fill: #ffe100;
+  margin-right: 4px;
+}
+
+.star-icon:last-child {
+  margin-right: 0;
+}
+
+/* Ім'я користувача */
+.reviews-username {
+  font-family: 'DynaPuff', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Текст відгуку */
+.reviews-text {
+  font-family: 'Crimson Text', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  margin: 0;
+}
+
+/* Navigation buttons */
+.swiper-btn-prev,
+.swiper-btn-next {
+  position: absolute;
+  top: 58%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Позиціювання кнопки "prev" */
+.swiper-btn-prev {
+  transform: translateX(-100%) translateY(-50%);
+}
+
+/* Позиціювання кнопки "next" */
+.swiper-btn-next {
+  transform: translateX(1440%) translateY(-50%);
+}
+
+.swiper-btn-prev svg,
+.swiper-btn-next svg {
+  width: 20px;
+  height: 20px;
+  fill: #e9d6aa;
+}
+
+.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.swiper-button-active {
+  opacity: 1;
+}
+
+/* Rotate left arrow */
+.swiper-btn-prev svg {
+  transform: rotate(180deg);
+}
+
+@media (min-width: 1200px) {
+  #reviews {
+    padding: 80px 100px;
+    background-image: url(/img/reviews-bg-desktop@1x.png);
+  }
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    #reviews {
+      background-image: url(/img/reviews-bg-desktop@2x.png);
+    }
+  }
+
+  .reviews-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .reviews-swiper {
+    padding: 0 60px;
+  }
+
+  .reviews-item {
+    padding: 32px;
+    border-radius: 49px;
+    width: 470px;
+    height: 214px;
+  }
+
+  .reviews-username {
+    font-size: 20px;
+  }
+
+  .reviews-text {
+    font-size: 26px;
+  }
+
+  .star-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .swiper-btn-prev svg,
+  .swiper-btn-next svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .swiper-btn-prev {
+    transform: translateX(-150%) translateY(-50%);
+  }
+
+  .swiper-btn-next {
+    transform: translateX(2980%) translateY(-50%);
+  }
+}

@@ -1,0 +1,172 @@
+#faq {
+  padding: 40px 16px;
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.faq-title {
+  font-family: 'DynaPuff', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #2a2a2a;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.faq-acc-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faq-acc-item {
+  display: flex;
+  flex-direction: column;
+  border: 1.15px solid rgba(255, 255, 255, 0.29);
+  border-radius: 20px;
+  padding: 13px 13px 13px 16px;
+  backdrop-filter: blur(14px);
+  background: rgba(126, 181, 222, 0.16);
+}
+
+.faq-acc-item .faq-acc-header {
+  font-family: 'Crimson Text', serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.faq-acc-button {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.faq-acc-icon {
+  width: 24px;
+  height: 24px;
+  fill: #0061af;
+  transition: transform 0.3s ease;
+  align-items: center;
+}
+
+.faq-acc-panel {
+  width: 100%;
+  display: flex;
+  padding-left: 0;
+}
+
+.faq-acc-text {
+  font-family: 'Crimson Text', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000;
+  display: flex;
+  flex-grow: 1;
+  text-align: left;
+  padding-bottom: 5px;
+  margin-top: 10px;
+}
+
+.faq-acc-text img {
+  width: 14px;
+  height: 14px;
+  margin-top: 2px;
+  margin-right: 2px;
+}
+
+.faq-question-text {
+  flex-grow: 1;
+  text-align: left;
+  padding-right: 16px;
+}
+
+@media screen and (min-width: 1200px) {
+  #faq {
+    padding: 100px 60px;
+  }
+
+  .faq-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .faq-title {
+    font-size: 36px;
+  }
+
+  /* Двоколонковий макет для десктопу */
+  .faq-acc-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .faq-acc-item {
+    padding: 20px 30px;
+  }
+
+  .faq-acc-item .faq-acc-header {
+    font-weight: 600;
+    font-size: 26px;
+  }
+
+  .faq-acc-text {
+    font-weight: 400;
+    font-size: 26px;
+  }
+
+  .faq-acc-text img {
+    width: 26px;
+    height: 26px;
+    margin-top: 2px;
+    margin-right: 6px;
+  }
+
+  /* Збільшені розміри кнопки та іконки стрілки */
+  .faq-acc-button {
+    width: 42px;
+    height: 42px;
+  }
+
+  .faq-acc-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.ac .ac-panel {
+  overflow: hidden;
+  transition: height 0.3s ease-out, visibility 0.3s ease-out;
+}
+
+.ac.js-enabled .ac-panel {
+  visibility: hidden;
+}
+
+.ac.is-active .ac-panel {
+  visibility: visible;
+  padding-top: 8px;
+}
+
+.ac.is-active .faq-acc-icon {
+  transform: rotate(90deg);
+}

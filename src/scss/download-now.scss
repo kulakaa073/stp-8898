@@ -1,0 +1,119 @@
+#download-now {
+  padding: 40px 16px;
+  background-image: url(/img/download-now-bg-mobile@1x.png);
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+  background-size: 100% 100%;
+  margin-bottom: 40px;
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  #download-now {
+    background-image: url(/img/download-now-bg-mobile@2x.png);
+  }
+}
+
+.dowl-head {
+  font-family: 'DynaPuff', sans-serif;
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 24px;
+  text-align: left;
+}
+
+.dowl-text {
+  font-weight: 600;
+  font-size: 32px;
+  font-family: 'Crimson Text', sans-serif;
+  background: linear-gradient(180deg, #ecd101 0%, #f5ab1b 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.dowl-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 10px 70px;
+  width: 288px;
+  height: 53px;
+  background: #fff;
+  font-family: 'Crimson Text', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  color: #000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.dowl-btn:hover {
+  background: #f8f8f8;
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.dowl-svg {
+  margin-right: 10px;
+}
+
+@media (min-width: 1200px) {
+  #download-now {
+    padding: 100px 60px;
+    background-image: none;
+    margin-bottom: 100px;
+  }
+
+  #download-now::before {
+    content: '';
+    position: absolute;
+    top: -11px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(/img/download-now-bg-desktop@1x.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    #download-now::before {
+      background-image: url(/img/download-now-bg-desktop@2x.png);
+    }
+  }
+
+  .dowl-head {
+    font-weight: 500;
+    font-size: 36px;
+    margin-bottom: 36px;
+  }
+
+  .dowl-text {
+    font-weight: 600;
+    font-size: 64px;
+    margin-bottom: 12px;
+  }
+
+  .dowl-btn {
+    padding: 12.5px 65px;
+    width: 346px;
+    height: 67px;
+    font-size: 32px;
+  }
+
+  .dowl-svg {
+    margin-right: 24px;
+  }
+}

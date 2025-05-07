@@ -1,10 +1,14 @@
 import Accordion from 'accordion-js';
 
-const according = document.querySelector('.faq-acc-container');
-const listItemAc = document.querySelectorAll('.ac');
-
-new Accordion(according, {
-  collapse: true,
-  duration: 400,
-  showMultiple: false,
+document.addEventListener('DOMContentLoaded', () => {
+  const according = document.querySelector('.faq-acc-container');
+  if (according) {
+    new Accordion(according, {
+      collapse: true,
+      duration: 400,
+      showMultiple: false,
+    });
+  } else {
+    console.error("Елемент з класом '.faq-acc-container' не знайдено!");
+  }
 });
