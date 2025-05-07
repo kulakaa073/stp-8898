@@ -11,6 +11,7 @@ const reviewsSwiper = new Swiper(swiperEl, {
   slidesPerView: 1,
   spaceBetween: 5,
   direction: 'horizontal',
+  autoResize: false,
   navigation: {
     nextEl: swiperBtnNextEl,
     prevEl: swiperBtnPrevEl,
@@ -22,7 +23,7 @@ const reviewsSwiper = new Swiper(swiperEl, {
   breakpoints: {
     1200: {
       slidesPerView: 2,
-      spaceBetween: 15,
+      spaceBetween: 20,
     },
   },
 });
