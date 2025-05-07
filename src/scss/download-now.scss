@@ -29,6 +29,13 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 20px;
+  background-size: 100% 200%;
+  background-position: top;
+}
+
+.dowl-text.part {
+  background-size: 100% 200%;
+  background-position: bottom;
 }
 
 .dowl-btn {

@@ -46,3 +46,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// Video overlay and controll
+const overlay = document.querySelector('[data-video="overlay"]');
+const playButton = document.querySelector('[data-video="button"]');
+const iframe = document.querySelector('[data-video="embed"]');
+
+playButton.addEventListener('click', event => {
+  console.log(event);
+  overlay.style.display = 'none';
+  // Start playing the video
+  iframe.src += '?autoplay=1';
+});

@@ -5,6 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marbelicious: Marble Shooter</title>
+    <link rel="preload" href="/scss/styles.scss" as="style" />
     <link rel="stylesheet" href="./scss/styles.scss" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,6 +13,35 @@
       href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DynaPuff:wdth,wght@75..100,400..700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="preload"
+      fetchpriority="high"
+      as="image"
+      href="img/hero-mobile@1x.jpg"
+      type="image/png"
+    />
+    <link
+      rel="preload"
+      fetchpriority="high"
+      as="image"
+      href="img/hero-mobile@2x.jpg"
+      type="image/png"
+    />
+    <link
+      rel="preload"
+      fetchpriority="high"
+      as="image"
+      href="img/hero-desktop@1x.png"
+      type="image/png"
+    />
+    <link
+      rel="preload"
+      fetchpriority="high"
+      as="image"
+      href="img/hero-desktop@2x.png"
+      type="image/png"
+    />
+    <script type="module" src="./main.js" defer></script>
   </head>
   <body>
     <load ="partials/header.html" />
@@ -31,7 +61,5 @@
     <load ="partials/footer.html" />
     <load ="partials/mobile-menu.html" />
     <load ="partials/cookies-consent.html" />
-
-    <script type="module" src="./main.js"></script>
   </body>
 </html>

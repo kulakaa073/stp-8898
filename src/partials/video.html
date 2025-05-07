@@ -2,7 +2,15 @@
   <div class="container">
     <h2 class="video-title">Watch the Trailer</h2>
     <div class="embed-container">
+      <div class="video-overlay" data-video="overlay">
+        <button class="play-button" data-video="button">
+          <svg class="icon-play" width="12" height="12">
+            <use href="/img/sprite.svg#icon-play"></use>
+          </svg>
+        </button>
+      </div>
       <iframe
+        data-video="embed"
         src="https://www.youtube.com/embed/M1MwcKPEi4I"
         frameborder="0"
         allowfullscreen
