@@ -1,10 +1,11 @@
-.cookie-consent {
+.cookie-container {
+  padding: 20px 0;
+  background: #d7c6a0;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  background: #d7c6a0;
-  padding: 20px 16px;
+
   z-index: 9999;
   display: none;
 }
@@ -41,11 +42,17 @@
   text-transform: uppercase;
   background: #0061af;
   padding: 5.5px 80px;
+  transition: all 250ms ease-in-out;
+
+  &:hover {
+    background: #0060afdc;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
-  .cookie-consent {
-    padding: 26px 60px;
+  .cookie-container {
+    padding: 26px 0;
+    background-color: #f1dcaf;
   }
 
   .cookie-content {
@@ -58,9 +65,11 @@
 
   .text-cookie {
     font-size: 20px;
+    line-height: 26px;
     margin-bottom: 0;
     text-align: left;
     flex: 1;
+    width: 552px;
   }
 
   .cookie-buttons {

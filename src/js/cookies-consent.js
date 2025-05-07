@@ -1,15 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
   const cookieConsent = document.getElementById('cookieConsent');
 
-  if (!localStorage.getItem('cookieConsentShown')) {
+  if (!localStorage.getItem('cookiesAccepted')) {
     cookieConsent.style.display = 'block';
 
     document.body.classList.add('no-scroll');
   }
 
   function handleCookieConsent(accepted) {
-    localStorage.setItem('cookieConsentShown', 'true');
-
     localStorage.setItem('cookiesAccepted', accepted ? 'true' : 'false');
 
     cookieConsent.style.display = 'none';
