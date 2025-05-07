@@ -1,10 +1,11 @@
 #download-now {
-  padding: 40px 20px;
+  padding: 40px 16px;
   background-image: url(/img/download-now-bg-mobile@1x.png);
   color: #ffffff;
   position: relative;
   z-index: 1;
   background-size: 100% 100%;
+  margin-bottom: 40px;
 }
 
 .container {
@@ -36,8 +37,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 20px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .dowl-btn {
@@ -45,7 +44,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  padding: 10px 20px;
+  padding: 10px 70px;
   width: 288px;
   height: 53px;
   background: #fff;
@@ -71,8 +70,9 @@
 
 @media (min-width: 1200px) {
   #download-now {
-    padding: 100px 0;
+    padding: 100px 60px;
     background-image: none;
+    margin-bottom: 100px;
   }
 
   #download-now::before {
@@ -107,9 +107,13 @@
   }
 
   .dowl-btn {
-    padding: 10px;
+    padding: 12.5px 65px;
     width: 346px;
     height: 67px;
     font-size: 32px;
+  }
+
+  .dowl-svg {
+    margin-right: 24px;
   }
 }

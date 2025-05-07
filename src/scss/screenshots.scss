@@ -1,7 +1,9 @@
+/* Контейнер для скріншотів */
 #screenshots {
-  padding: 40px 16px;
+  padding: 40px 16px; /* Стандартний відступ */
 }
 
+/* Заголовок */
 .screen-head {
   font-family: 'DynaPuff', sans-serif;
   font-weight: 500;
@@ -9,18 +11,24 @@
   color: #2a2a2a;
   margin-bottom: 20px;
 }
+
+/* Контейнер для всіх фото */
 .screenshot-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+/* Контейнер для фото */
 .photo-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0px;
+  gap: 15px;
   position: relative;
 }
+
+/* Окреме фото */
 .photo {
   width: 153px;
   height: 309px;
@@ -28,7 +36,11 @@
   border-radius: 20px;
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1;
+  margin: 0 auto;
 }
+
+/* Фото всередині контейнера */
 .photo img {
   width: 100%;
   height: 100%;
@@ -36,34 +48,42 @@
   display: block;
 }
 
-/* Наложение фото на мобильной версии */
-.photo:nth-child(1) {
-  transform: translate(-12px, 10px);
-  z-index: 3;
-  margin-right: -20px;
-}
-.photo:nth-child(2) {
-  transform: translate(12px, -10px);
-  z-index: 4;
-  margin-left: -20px;
-}
-.photo:nth-child(3) {
-  transform: translate(-15px, -30px);
-  z-index: 5;
-  margin-right: -30px;
-}
-.photo:nth-child(4) {
-  transform: translate(15px, -40px);
-  z-index: 6;
-  margin-left: -30px;
-}
-
+/* Винесення фото з hover */
 .photo:hover {
-  transform: translateY(calc(var(--y-offset) - 10px));
+  transform: scale(1.1); /* Збільшення при наведенні */
+  z-index: 10; /* Підняття над іншими */
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Адаптация для ПК */
+.photo:nth-child(1) {
+  transform: translateY(10px);
+  z-index: 3;
+  justify-self: end; /* Вирівнювання до правого краю */
+  margin-right: -30px; /* Невеликий відступ справа */
+}
+
+.photo:nth-child(2) {
+  transform: translateY(-10px);
+  z-index: 4;
+  justify-self: start;
+  margin-left: 5px;
+}
+
+.photo:nth-child(3) {
+  transform: translateY(-30px);
+  z-index: 5;
+  justify-self: end;
+  margin-right: -30px;
+}
+
+.photo:nth-child(4) {
+  transform: translateY(-40px);
+  z-index: 6;
+  justify-self: start;
+  margin-left: 5px;
+}
+
+/* Адаптація для ПК */
 @media (min-width: 1200px) {
   #screenshots {
     padding: 100px 60px;
@@ -76,14 +96,14 @@
   .photo-container {
     flex-wrap: nowrap;
   }
+
   .photo {
     width: 200px;
     height: 400px;
     margin-left: -30px;
   }
-  .photo:first-child {
-    margin-left: 0;
-  }
+
+  /* Змінено розташування фото */
   .photo:nth-child(1) {
     transform: translateY(10px);
     z-index: 2;
@@ -100,8 +120,10 @@
     transform: translateY(-15px);
     z-index: 3;
   }
+
+  /* Покращений hover */
   .photo:hover {
-    transform: translateY(calc(var(--y-offset) - 10px));
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.15); /* Більше збільшення */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
   }
 }
