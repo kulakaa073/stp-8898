@@ -6,16 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marbelicious: Marble Shooter</title>
     
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DynaPuff:wdth,wght@75..100,400..700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="preload"
+      fetchpriority="high"
+      as="image"
+      href="/stp-8898/assets/hero-mobile@1x-8a7a5825.jpg"
+      type="image/png"
+    />
+    <link
+      rel="preload"
+      fetchpriority="high"
+      as="image"
+      href="/stp-8898/assets/hero-mobile@2x-87fa0315.jpg"
+      type="image/png"
+    />
+    <link
+      rel="preload"
+      fetchpriority="high"
+      as="image"
+      href="/stp-8898/assets/hero-desktop@1x-079dc6b5.png"
+      type="image/png"
+    />
+    <link
+      rel="preload"
+      fetchpriority="high"
+      as="image"
+      href="/stp-8898/assets/hero-desktop@2x-cfef9c4a.png"
+      type="image/png"
+    />
+    
     <script type="module" crossorigin src="/stp-8898/commonHelpers2.js"></script>
     <link rel="modulepreload" crossorigin href="/stp-8898/assets/vendor-7f93da65.js">
     <link rel="stylesheet" href="/stp-8898/assets/vendor-7c8ef494.css">
-    <link rel="stylesheet" href="/stp-8898/assets/index-3d5ec22c.css">
+    <link rel="stylesheet" href="/stp-8898/assets/index-6a2b99c4.css">
   </head>
   <body>
     <header class="header">
@@ -36,7 +66,7 @@
     </nav>
     <button id="burger-menu-button" data-action="open">
       <svg class="burger-menu-icon" width="22" height="18">
-        <use href="/stp-8898/assets/sprite-c001b687.svg#icon-burger-menu"></use>
+        <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-burger-menu"></use>
       </svg>
     </button>
   </div>
@@ -54,7 +84,7 @@
         target="_blank"
       >
         <svg class="icon-gplay" width="22" height="18">
-          <use href="/stp-8898/assets/sprite-c001b687.svg#icon-gplay"></use>
+          <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-gplay"></use>
         </svg>
         <p>Get it on <span>Google Play</span></p>
       </a>
@@ -234,7 +264,15 @@
   <div class="container">
     <h2 class="video-title">Watch the Trailer</h2>
     <div class="embed-container">
+      <div class="video-overlay" data-video="overlay">
+        <button class="play-button" data-video="button">
+          <svg class="icon-play" width="12" height="12">
+            <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-play"></use>
+          </svg>
+        </button>
+      </div>
       <iframe
+        data-video="embed"
         src="https://www.youtube.com/embed/M1MwcKPEi4I"
         frameborder="0"
         allowfullscreen
@@ -251,21 +289,60 @@
     <h2 class="screen-head">In-Game Preview</h2>
     <div class="screenshot-container">
       <div class="photo">
-        <img srcset="/stp-8898/assets/iphone-blast-mobile@1x-df241fad.png 1x, /stp-8898/assets/iphone-blast-mobile@2x-ff87eade.png 2x" src= /stp-8898/assets/iphone-blast-mobile@1x-df241fad.png
-        alt="Blast" width="153" height="309"/>
+        <picture>
+          <source
+            media="(min-width: 1200px)"
+            srcset="/stp-8898/assets/iphone-blast-desktop@1x-d382a415.png 1x, /stp-8898/assets/iphone-blast-desktop@2x-42ffca5a.png 2x"
+          />
+          <source
+            media="(min-width: 320px)"
+            srcset="/stp-8898/assets/iphone-blast-mobile@1x-df241fad.png 1x, /stp-8898/assets/iphone-blast-mobile@2x-ff87eade.png 2x"
+          />
+          <img src= /stp-8898/assets/iphone-blast-mobile@1x-df241fad.png alt="Blast" width="153"
+          height="309"/>
+        </picture>
       </div>
       <div class="photo">
-        <img srcset="/stp-8898/assets/iphone-match-mobile@1x-27951a10.png 1x, /stp-8898/assets/iphone-match-mobile@2x-93569ead.png 2x" src= /stp-8898/assets/iphone-match-mobile@1x-27951a10.png
-        alt="Match" width="153" height="309"/>
+        <picture>
+          <source
+            media="(min-width: 1200px)"
+            srcset="/stp-8898/assets/iphone-match-desktop@1x-86323ae0.png 1x, /stp-8898/assets/iphone-match-desktop@2x-f13d412f.png 2x"
+          />
+          <source
+            media="(min-width: 320px)"
+            srcset="/stp-8898/assets/iphone-match-mobile@1x-27951a10.png 1x, /stp-8898/assets/iphone-match-mobile@2x-93569ead.png 2x"
+          />
+          <img src= /stp-8898/assets/iphone-match-mobile@1x-27951a10.png alt="Match" width="153"
+          height="309"/>
+        </picture>
       </div>
       <div class="photo">
-        <img srcset="/stp-8898/assets/iphone-win-mobile@1x-73fc181e.png 1x, /stp-8898/assets/iphone-win-mobile@2x-e5e91a1c.png 2x" src= /stp-8898/assets/iphone-win-mobile@1x-73fc181e.png
-        alt="Win" width="153" height="309"/>
+        <picture>
+          <source
+            media="(min-width: 1200px)"
+            srcset="/stp-8898/assets/iphone-win-desktop@1x-63ce660c.png 1x, /stp-8898/assets/iphone-win-desktop@2x-d451e31c.png 2x"
+          />
+          <source
+            media="(min-width: 320px)"
+            srcset="/stp-8898/assets/iphone-win-mobile@1x-73fc181e.png 1x, /stp-8898/assets/iphone-win-mobile@2x-e5e91a1c.png 2x"
+          />
+          <img src= /stp-8898/assets/iphone-win-mobile@1x-73fc181e.png alt="Win" width="153"
+          height="309"/>
+        </picture>
       </div>
       <div class="photo">
-        <img srcset="/stp-8898/assets/iphone-explore-mobile@1x-d4e5f67e.png 1x, /stp-8898/assets/iphone-explore-mobile@2x-9053d964.png 2x" src=
-        /stp-8898/assets/iphone-explore-mobile@1x-d4e5f67e.png alt="Explore" width="153"
-        height="309"/>
+        <picture>
+          <source
+            media="(min-width: 1200px)"
+            srcset="/stp-8898/assets/iphone-explore-desktop@1x-4be24bfd.png 1x, /stp-8898/assets/iphone-explore-desktop@2x-4ecf1d7e.png 2x"
+          />
+          <source
+            media="(min-width: 320px)"
+            srcset="/stp-8898/assets/iphone-explore-mobile@1x-d4e5f67e.png 1x, /stp-8898/assets/iphone-explore-mobile@2x-9053d964.png 2x"
+          />
+          <img src= /stp-8898/assets/iphone-explore-mobile@1x-d4e5f67e.png alt="Explore" width="153"
+          height="309"/>
+        </picture>
       </div>
     </div>
   </div>
@@ -280,19 +357,19 @@
         <li class="swiper-slide reviews-item">
           <div class="reviews-stars">
             <svg class="star-icon" width="24" height="24">
-              <use href="/stp-8898/assets/sprite-c001b687.svg#icon-star"></use>
+              <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-star"></use>
             </svg>
             <svg class="star-icon" width="24" height="24">
-              <use href="/stp-8898/assets/sprite-c001b687.svg#icon-star"></use>
+              <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-star"></use>
             </svg>
             <svg class="star-icon" width="24" height="24">
-              <use href="/stp-8898/assets/sprite-c001b687.svg#icon-star"></use>
+              <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-star"></use>
             </svg>
             <svg class="star-icon" width="24" height="24">
-              <use href="/stp-8898/assets/sprite-c001b687.svg#icon-star"></use>
+              <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-star"></use>
             </svg>
             <svg class="star-icon" width="24" height="24">
-              <use href="/stp-8898/assets/sprite-c001b687.svg#icon-star"></use>
+              <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-star"></use>
             </svg>
           </div>
           <div class="reviews-username">BubbleBlueBird</div>
@@ -303,16 +380,16 @@
         <li class="swiper-slide reviews-item">
           <div class="reviews-stars">
             <svg class="star-icon" width="24" height="24">
-              <use href="/stp-8898/assets/sprite-c001b687.svg#icon-star"></use>
+              <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-star"></use>
             </svg>
             <svg class="star-icon" width="24" height="24">
-              <use href="/stp-8898/assets/sprite-c001b687.svg#icon-star"></use>
+              <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-star"></use>
             </svg>
             <svg class="star-icon" width="24" height="24">
-              <use href="/stp-8898/assets/sprite-c001b687.svg#icon-star"></use>
+              <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-star"></use>
             </svg>
             <svg class="star-icon" width="24" height="24">
-              <use href="/stp-8898/assets/sprite-c001b687.svg#icon-star"></use>
+              <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-star"></use>
             </svg>
           </div>
           <div class="reviews-username">PopMaster2000</div>
@@ -323,19 +400,19 @@
         <li class="swiper-slide reviews-item">
           <div class="reviews-stars">
             <svg class="star-icon" width="24" height="24">
-              <use href="/stp-8898/assets/sprite-c001b687.svg#icon-star"></use>
+              <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-star"></use>
             </svg>
             <svg class="star-icon" width="24" height="24">
-              <use href="/stp-8898/assets/sprite-c001b687.svg#icon-star"></use>
+              <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-star"></use>
             </svg>
             <svg class="star-icon" width="24" height="24">
-              <use href="/stp-8898/assets/sprite-c001b687.svg#icon-star"></use>
+              <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-star"></use>
             </svg>
             <svg class="star-icon" width="24" height="24">
-              <use href="/stp-8898/assets/sprite-c001b687.svg#icon-star"></use>
+              <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-star"></use>
             </svg>
             <svg class="star-icon" width="24" height="24">
-              <use href="/stp-8898/assets/sprite-c001b687.svg#icon-star"></use>
+              <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-star"></use>
             </svg>
           </div>
           <div class="reviews-username">MintMelon</div>
@@ -346,16 +423,16 @@
         <li class="swiper-slide reviews-item">
           <div class="reviews-stars">
             <svg class="star-icon" width="24" height="24">
-              <use href="/stp-8898/assets/sprite-c001b687.svg#icon-star"></use>
+              <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-star"></use>
             </svg>
             <svg class="star-icon" width="24" height="24">
-              <use href="/stp-8898/assets/sprite-c001b687.svg#icon-star"></use>
+              <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-star"></use>
             </svg>
             <svg class="star-icon" width="24" height="24">
-              <use href="/stp-8898/assets/sprite-c001b687.svg#icon-star"></use>
+              <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-star"></use>
             </svg>
             <svg class="star-icon" width="24" height="24">
-              <use href="/stp-8898/assets/sprite-c001b687.svg#icon-star"></use>
+              <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-star"></use>
             </svg>
           </div>
           <div class="reviews-username">ZenScorer</div>
@@ -366,19 +443,19 @@
         <li class="swiper-slide reviews-item">
           <div class="reviews-stars">
             <svg class="star-icon" width="24" height="24">
-              <use href="/stp-8898/assets/sprite-c001b687.svg#icon-star"></use>
+              <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-star"></use>
             </svg>
             <svg class="star-icon" width="24" height="24">
-              <use href="/stp-8898/assets/sprite-c001b687.svg#icon-star"></use>
+              <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-star"></use>
             </svg>
             <svg class="star-icon" width="24" height="24">
-              <use href="/stp-8898/assets/sprite-c001b687.svg#icon-star"></use>
+              <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-star"></use>
             </svg>
             <svg class="star-icon" width="24" height="24">
-              <use href="/stp-8898/assets/sprite-c001b687.svg#icon-star"></use>
+              <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-star"></use>
             </svg>
             <svg class="star-icon" width="24" height="24">
-              <use href="/stp-8898/assets/sprite-c001b687.svg#icon-star"></use>
+              <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-star"></use>
             </svg>
           </div>
           <div class="reviews-username">PuzzLava</div>
@@ -397,12 +474,12 @@
           width="18"
           height="18"
         >
-          <use href="/stp-8898/assets/sprite-c001b687.svg#icon-nav-button"></use>
+          <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-nav-button"></use>
         </svg>
       </button>
       <button class="swiper-btn-next" data-swiper="btn-next">
         <svg class="go-acc-icon" aria-label="Arrow icon" width="18" height="18">
-          <use href="/stp-8898/assets/sprite-c001b687.svg#icon-nav-button"></use>
+          <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-nav-button"></use>
         </svg>
       </button>
     </div>
@@ -424,7 +501,7 @@
                 width="18"
                 height="18"
               >
-                <use href="/stp-8898/assets/sprite-c001b687.svg#icon-nav-button"></use>
+                <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-nav-button"></use>
               </svg>
             </button>
           </h3>
@@ -448,7 +525,7 @@
                 width="18"
                 height="18"
               >
-                <use href="/stp-8898/assets/sprite-c001b687.svg#icon-nav-button"></use>
+                <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-nav-button"></use>
               </svg>
             </button>
           </h3>
@@ -472,7 +549,7 @@
                 width="18"
                 height="18"
               >
-                <use href="/stp-8898/assets/sprite-c001b687.svg#icon-nav-button"></use>
+                <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-nav-button"></use>
               </svg>
             </button>
           </h3>
@@ -496,7 +573,7 @@
                 width="18"
                 height="18"
               >
-                <use href="/stp-8898/assets/sprite-c001b687.svg#icon-nav-button"></use>
+                <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-nav-button"></use>
               </svg>
             </button>
           </h3>
@@ -520,7 +597,7 @@
                 width="18"
                 height="18"
               >
-                <use href="/stp-8898/assets/sprite-c001b687.svg#icon-nav-button"></use>
+                <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-nav-button"></use>
               </svg>
             </button>
           </h3>
@@ -544,7 +621,7 @@
                 width="18"
                 height="18"
               >
-                <use href="/stp-8898/assets/sprite-c001b687.svg#icon-nav-button"></use>
+                <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-nav-button"></use>
               </svg>
             </button>
           </h3>
@@ -568,7 +645,7 @@
                 width="18"
                 height="18"
               >
-                <use href="/stp-8898/assets/sprite-c001b687.svg#icon-nav-button"></use>
+                <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-nav-button"></use>
               </svg>
             </button>
           </h3>
@@ -592,7 +669,7 @@
                 width="18"
                 height="18"
               >
-                <use href="/stp-8898/assets/sprite-c001b687.svg#icon-nav-button"></use>
+                <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-nav-button"></use>
               </svg>
             </button>
           </h3>
@@ -611,10 +688,10 @@
       <section id="download-now">
   <div class="container">
     <h2 class="dowl-head">Enter the Magical Marble Realm!</h2>
-    <h3 class="dowl-text">
-      Step into the relaxing world of Marbelicious.</br> Blast, match, and build &ndash;	
-      anytime, anywhere.
-    </h3>
+    <p class="dowl-text">Step into the relaxing world of Marbelicious.</p>
+    <p class="dowl-text part">
+      Blast, match, and build &ndash; anytime, anywhere.
+    </p>
     <a
       href="https://play.google.com/store/apps/details?id=com.marbelicious.game"
       class="dowl-btn"
@@ -622,8 +699,8 @@
       rel="noopener noreferrer"
     >
       <svg class="dowl-svg" width="30" height="33">
-          <use href="/stp-8898/assets/sprite-c001b687.svg#icon-gplay"></use>
-        </svg>
+        <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-gplay"></use>
+      </svg>
       Google Play
     </a>
   </div>
@@ -655,7 +732,7 @@
     <div class="mobile-menu">
       <button id="close-menu-button" data-action="close">
         <svg class="close-menu-icon" width="22" height="18">
-          <use href="/stp-8898/assets/sprite-c001b687.svg#icon-close-button"></use>
+          <use href="/stp-8898/assets/sprite-9dd80052.svg#icon-close-button"></use>
         </svg>
       </button>
       <a class="mobile-menu-logo" href=""
@@ -711,7 +788,5 @@
   </div>
 </div>
 
-
-    
   </body>
 </html>
